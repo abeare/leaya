@@ -1,0 +1,144 @@
+﻿@model electrocalculator.Models.components
+@{
+    ViewBag.Title = "resultpage";
+    List<string> Rcomp = Session["Rvalue"] as List<string>;
+    List<string> RPcomp = Session["Rpositive"] as List<string>;
+    List<string> RNcomp = Session["Rnegative"] as List<string>;
+
+
+
+    List<string> Ccomp = Session["Cvalue"] as List<string>;
+    List<string> CPcomp = Session["Cpositive"] as List<string>;
+    List<string> CNcomp = Session["Cnegative"] as List<string>;
+
+
+
+    List<string> Icomp = Session["Ivalue"] as List<string>;
+    List<string> IPcomp = Session["Ipositive"] as List<string>;
+    List<string> INcomp = Session["Inegative"] as List<string>;
+
+
+}
+
+<h2>resultpage</h2>
+
+@{
+    foreach (string var in Rcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+
+    foreach (string var in RPcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in RNcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in Ccomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in CPcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in CNcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in Icomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in IPcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+    foreach (string var in INcomp)
+    {
+        <p>@var</p>
+    }
+
+    <br />
+}
+
+
+//chenged her
+
+@{
+
+    List<string> Rcomp = Session["Rvalue"] as List<string>;
+    //List<string> RPcomp = Session["Rpositive"] as List<string>;
+    //List<string> RNcomp = Session["Rnegative"] as List<string>;
+
+    List<double> Rcompvalue = todouble(Rcomp);
+    List<int> RPcompvalue = toint(RPcomp);
+    List<int> RNcompvalue = toint(RNcomp);
+
+    public List<double> todouble(List<string> list)
+    {
+                List<double> li =new List<double>();
+                foreach(string var in list)
+                {
+                    li.Add(Convert.ToDouble(var));
+                }
+                return li;
+    }
+
+     public List<int> toint(List<string> list)
+     {
+                List<int> li =new List<int>();
+                foreach(string var in list)
+                {
+                    li.Add(Convert.ToInt32(var));
+                }
+                return li;
+     }
+
+    List<double> Ccompvalue = todouble(Session["Cvalue"] as List<string>);
+    List<int> CPcompvalue = toint(Session["Cpositive"] as List<string>);
+    List<int> CNcompvalue = toint(Session["Cnegative"] as List<string>);
+
+
+
+    List<double> Icompvalue = todouble(Session["Ivalue"] as List<string>);
+    List<int> IPcompvalue = toint(Session["Ipositive"] as List<string>);
+    List<int> INcompvalue = toint(Session["Inegative"] as List<string>);
+}
+
+
+
+
+
+
+
+<h2>resultpage</h2>
+
+@{
+    foreach (int var in Rcompvalue)
+    {
+    <p>@var</p>
+    }
+
+    <br />
+
+
+}

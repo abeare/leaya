@@ -1,0 +1,42 @@
+﻿@model electrocalculator.Models.components
+
+@{
+    electrocalculator.Models.components comp = Session["components"] as electrocalculator.Models.components;
+    var r = Convert.ToInt32(comp.Nodes);
+    var val = Convert.ToInt32(comp.Inductor);
+    int x;
+
+}
+
+
+@using (@Html.BeginForm("inductor", "calculator", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <h1> @comp.Nodes </h1>
+    for (x = 0; x < val; x++)
+    {
+        @Html.Label("Inductor - " + (x + 1) + ": ")
+        @Html.TextBox("Inductor" + (x + 1));
+    <select name="Positive@(x + 1)" id="Positive@(x + 1)">
+        @for (int y = 0; y < r; y++)
+        {
+            <option>@y</option>
+        }
+    </select>
+
+    <select name="Negative@(x + 1)" id="Negative@(x + 1)">
+        @for (int y = 0; y < r; y++)
+        {
+            <option>@y</option>
+        }
+    </select>
+    <br />
+    }
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Next" class="btn btn-default" />
+        </div>
+    </div>
+}
