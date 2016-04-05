@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost/orchard/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/servicetoorchard" />
-  <xs:element name="gauss_c">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/servicetoorchard" minOccurs="0" name="www" nillable="true" type="q1:ArrayOfComplexdata" />
-        <xs:element minOccurs="0" name="n" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="gauss_cResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/servicetoorchard" minOccurs="0" name="gauss_cResult" nillable="true" type="q2:ArrayOfComplexdata" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/servicetoorchard" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/servicetoorchard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfComplexdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Complexdata" nillable="true" type="tns:Complexdata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComplexdata" nillable="true" type="tns:ArrayOfComplexdata" />
+  <xs:complexType name="Complexdata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Imaginary" type="xs:double" />
+      <xs:element minOccurs="0" name="Real" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Complexdata" nillable="true" type="tns:Complexdata" />
 </xs:schema>

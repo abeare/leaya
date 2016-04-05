@@ -115,15 +115,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\Service\configuration91.svcinfo" />
-    <None Include="Service References\Service\configuration.svcinfo" />
-    <Content Include="Service References\Service\electrocalculator.Service.Complexdata.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\Service\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
     <Content Include="Web.config" />
@@ -150,16 +141,6 @@
     <None Include="Service References\Servicegauss\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Service\Service1.wsdl" />
-    <None Include="Service References\Service\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -181,11 +162,6 @@
     <Compile Include="Models\components.cs" />
     <Compile Include="Models\formtype.cs" />
     <Compile Include="Service References\Servicegauss\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\Service\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -214,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Servicegauss\" />
-    <WCFMetadataStorage Include="Service References\Service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
