@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}"
 EndProject
@@ -266,8 +266,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gulp", "Gulp", "{90EBEE36-B
 		Gulpfile.js = Gulpfile.js
 		Package.json = Package.json
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{E1DED8A1-661F-44D1-9723-CB40C47F0721}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "electronics", "electronics", "{171EE814-5969-4670-922C-3B9F8FE7BA4D}"
 EndProject
