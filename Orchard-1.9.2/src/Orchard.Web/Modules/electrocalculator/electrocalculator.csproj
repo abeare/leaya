@@ -159,6 +159,7 @@
     <Compile Include="Analysis\CreateLinearEquations.cs" />
     <Compile Include="Analysis\GaussMethod.cs" />
     <Compile Include="Analysis\LocalAnalysis.cs" />
+    <Compile Include="codeForTempSave.cs" />
     <Compile Include="Controllers\calculatorController.cs" />
     <Compile Include="Models\components.cs" />
     <Compile Include="Models\formtype.cs" />
